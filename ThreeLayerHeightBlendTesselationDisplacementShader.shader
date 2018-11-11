@@ -43,7 +43,7 @@ Shader "Grenqa/ThreeLayerHeightBlendTesselationDisplacement"
 
 		_SplatMap("Splat Map", 2D) = "white" {}
 
-		_DisplacementIntensity("Displacement Intensity", Range(0, .5)) = .1
+		_DisplacementIntensity("Displacement Intensity", Float) = .1
 		_TesselationMultiplier ("Tesselation Multiplier", Range(1, 64)) = 10
 		_TesselationMinDistance("Tesselation Min Distance", Float) = 25
 		_TesselationMaxDistance("Tesselation Max Distance", Float) = 100
