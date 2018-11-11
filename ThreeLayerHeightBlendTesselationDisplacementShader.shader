@@ -54,7 +54,7 @@ Shader "Grenqa/ThreeLayerHeightBlendTesselationDisplacement"
 
         CGPROGRAM
 
-		#pragma surface surf Lambert fullforwardshadows vertex:vert tessellate:tess addshadow
+		#pragma surface surf Lambert fullforwardshadows vertex:vert tessellate:tess
 
         #pragma target 5.0
 
