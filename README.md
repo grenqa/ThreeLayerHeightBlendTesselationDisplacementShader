@@ -4,3 +4,6 @@
 3. Detailed control
 
 If you want to have shadows on tesselated geometry, add "addshadow" to the end of the line 57.
+
+![](https://i.imgur.com/HJfFqGZ.png)
+Maybe this is not the best example, but I did not have more suitable textures.
