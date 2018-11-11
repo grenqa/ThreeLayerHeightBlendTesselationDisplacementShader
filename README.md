@@ -5,8 +5,6 @@
 
 If you want to have shadows on tesselated geometry, add "addshadow" to the end of the line 57.
 
-### **Please note that I was aiming for maximum realism, so the shader can be VERY expensive.**
-
 # How to use
 1. Create new material and assign this shader to it.
 1. Assign splat map. R component represents first layer, G - second, B - third.  
