@@ -15,4 +15,5 @@ If you want to have shadows on tesselated geometry, add "addshadow" to the end o
 
 Maybe this is not the best example, but I did not have more suitable textures.
 ![](https://i.imgur.com/mb8M3mO.png)
+![](https://i.imgur.com/uSosATS.png)
 ![](https://i.imgur.com/3a4jpPD.jpg)
