@@ -54,21 +54,11 @@ Shader "Grenqa/ThreeLayerHeightBlendTesselationDisplacement"
 
         CGPROGRAM
 
-		#pragma surface surf Lambert fullforwardshadows vertex:vert tessellate:tess
+		#pragma surface surf Lambert vertex:vert tessellate:tess addshadow
 
         #pragma target 5.0
 
 		#include "Tessellation.cginc"
-
-		struct appdata
-		{
-			float4 vertex : POSITION;
-			float4 tangent : TANGENT;
-			float3 normal : NORMAL;
-			float2 texcoord : TEXCOORD0;
-			float2 texcoord1 : TEXCOORD1;
-			float2 texcoord2 : TEXCOORD2;
-		};
 
 		struct Input
 		{
@@ -142,7 +132,7 @@ Shader "Grenqa/ThreeLayerHeightBlendTesselationDisplacement"
 			return saturate((value - min) / (max - min));
 		}
 
-		void vert(inout appdata v)
+		void vert(inout appdata_full v)
 		{
 			float3 height = float3(
 				GET_HEIGHT(v.texcoord.xy * _Tiling1, 1),
@@ -161,7 +151,7 @@ Shader "Grenqa/ThreeLayerHeightBlendTesselationDisplacement"
 			v.vertex.xyz += v.normal * d;
 		}
 
-		float4 tess(appdata v0, appdata v1, appdata v2)
+		float4 tess(appdata_full v0, appdata_full v1, appdata_full v2)
 		{
 			return UnityDistanceBasedTess(v0.vertex, v1.vertex, v2.vertex, _TesselationMinDistance, _TesselationMaxDistance, _TesselationMultiplier);
 		}
